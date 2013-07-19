@@ -19,6 +19,9 @@
 		C08142421799804400D1BB17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08142411799804400D1BB17 /* ViewController.m */; };
 		C08142451799804400D1BB17 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08142431799804400D1BB17 /* ViewController_iPhone.xib */; };
 		C08142481799804400D1BB17 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08142461799804400D1BB17 /* ViewController_iPad.xib */; };
+		C08142541799810F00D1BB17 /* StarField.m in Sources */ = {isa = PBXBuildFile; fileRef = C08142531799810F00D1BB17 /* StarField.m */; };
+		C0814256179981C700D1BB17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0814255179981C700D1BB17 /* QuartzCore.framework */; };
+		C08142591799828600D1BB17 /* RadialGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C08142581799828600D1BB17 /* RadialGradientView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,11 @@
 		C08142411799804400D1BB17 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C08142441799804400D1BB17 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		C08142471799804400D1BB17 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		C08142521799810F00D1BB17 /* StarField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarField.h; sourceTree = "<group>"; };
+		C08142531799810F00D1BB17 /* StarField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarField.m; sourceTree = "<group>"; };
+		C0814255179981C700D1BB17 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C08142571799828600D1BB17 /* RadialGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialGradientView.h; sourceTree = "<group>"; };
+		C08142581799828600D1BB17 /* RadialGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialGradientView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0814256179981C700D1BB17 /* QuartzCore.framework in Frameworks */,
 				C08142291799804400D1BB17 /* UIKit.framework in Frameworks */,
 				C081422B1799804400D1BB17 /* Foundation.framework in Frameworks */,
 				C081422D1799804400D1BB17 /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +67,7 @@
 		C081421C1799804400D1BB17 = {
 			isa = PBXGroup;
 			children = (
+				C0814255179981C700D1BB17 /* QuartzCore.framework */,
 				C081422E1799804400D1BB17 /* Satellite */,
 				C08142271799804400D1BB17 /* Frameworks */,
 				C08142261799804400D1BB17 /* Products */,
@@ -85,12 +95,12 @@
 		C081422E1799804400D1BB17 /* Satellite */ = {
 			isa = PBXGroup;
 			children = (
+				C0814251179980A800D1BB17 /* Controllers */,
+				C08142501799808300D1BB17 /* NavDeck */,
+				C081424F1799806F00D1BB17 /* Custom Views */,
+				C081424E1799806900D1BB17 /* Helpers */,
 				C08142371799804400D1BB17 /* AppDelegate.h */,
 				C08142381799804400D1BB17 /* AppDelegate.m */,
-				C08142401799804400D1BB17 /* ViewController.h */,
-				C08142411799804400D1BB17 /* ViewController.m */,
-				C08142431799804400D1BB17 /* ViewController_iPhone.xib */,
-				C08142461799804400D1BB17 /* ViewController_iPad.xib */,
 				C081422F1799804400D1BB17 /* Supporting Files */,
 			);
 			path = Satellite;
@@ -108,6 +118,42 @@
 				C081423E1799804400D1BB17 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C081424E1799806900D1BB17 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C081424F1799806F00D1BB17 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				C08142571799828600D1BB17 /* RadialGradientView.h */,
+				C08142581799828600D1BB17 /* RadialGradientView.m */,
+				C08142521799810F00D1BB17 /* StarField.h */,
+				C08142531799810F00D1BB17 /* StarField.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		C08142501799808300D1BB17 /* NavDeck */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NavDeck;
+			sourceTree = "<group>";
+		};
+		C0814251179980A800D1BB17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C08142401799804400D1BB17 /* ViewController.h */,
+				C08142411799804400D1BB17 /* ViewController.m */,
+				C08142431799804400D1BB17 /* ViewController_iPhone.xib */,
+				C08142461799804400D1BB17 /* ViewController_iPad.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +226,8 @@
 				C08142351799804400D1BB17 /* main.m in Sources */,
 				C08142391799804400D1BB17 /* AppDelegate.m in Sources */,
 				C08142421799804400D1BB17 /* ViewController.m in Sources */,
+				C08142541799810F00D1BB17 /* StarField.m in Sources */,
+				C08142591799828600D1BB17 /* RadialGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +325,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Satellite/Satellite-Prefix.pch";
 				INFOPLIST_FILE = "Satellite/Satellite-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -288,6 +337,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Satellite/Satellite-Prefix.pch";
 				INFOPLIST_FILE = "Satellite/Satellite-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -17,13 +17,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self buildUI];
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [self performSelector:@selector(dropInURLBar) withObject:nil afterDelay:0.25];
+}
+
+#pragma mark - UI
+-(void)buildUI {
+    // StarField
+    [bgStarField addStars:(self.view.frame.size.width*1.25)];
+}
+
+#pragma mark - Memory
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - URL Bar Animations/Actions
+-(void)dropInURLBar {
+    urlBarView.frame = CGRectMake(0, -1*urlBarView.frame.size.height, urlBarView.frame.size.width, urlBarView.frame.size.height);
+    [self.view addSubview:urlBarView];
+    [UIView animateWithDuration:0.2 animations:^{
+        urlBarView.frame = CGRectMake(0, 0, urlBarView.frame.size.width, urlBarView.frame.size.height);
+    }];
+}
+
+#pragma mark - UITextField Delegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
