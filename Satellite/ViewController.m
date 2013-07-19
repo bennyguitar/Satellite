@@ -57,6 +57,17 @@
     }];
 }
 
+- (IBAction)didPressBack:(id)sender {
+    [mainWebView goBack];
+}
+
+- (IBAction)didPressForward:(id)sender {
+    [mainWebView goForward];
+}
+
+- (IBAction)didPressTabs:(id)sender {
+}
+
 #pragma mark - UITextField Delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -130,6 +141,5 @@
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [urlTextField resignFirstResponder];
 }
-
 
 @end

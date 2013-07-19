@@ -26,4 +26,10 @@
     IBOutlet UIWebView *mainWebView;
 }
 
+// URL Bar Actions
+- (IBAction)didPressBack:(id)sender;
+- (IBAction)didPressForward:(id)sender;
+- (IBAction)didPressTabs:(id)sender;
+
+
 @end
