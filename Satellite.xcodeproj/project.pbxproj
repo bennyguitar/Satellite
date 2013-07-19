@@ -24,6 +24,9 @@
 		C08142591799828600D1BB17 /* RadialGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C08142581799828600D1BB17 /* RadialGradientView.m */; };
 		C081425C17998AF700D1BB17 /* URLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C081425B17998AF700D1BB17 /* URLHelpers.m */; };
 		C081425F1799927D00D1BB17 /* UIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C081425E1799927D00D1BB17 /* UIHelpers.m */; };
+		C081426417999A3A00D1BB17 /* backButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426117999A3A00D1BB17 /* backButton-01.png */; };
+		C081426517999A3A00D1BB17 /* forwardButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426217999A3A00D1BB17 /* forwardButton-01.png */; };
+		C081426617999A3A00D1BB17 /* tabsButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426317999A3A00D1BB17 /* tabsButton-01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		C081425B17998AF700D1BB17 /* URLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLHelpers.m; sourceTree = "<group>"; };
 		C081425D1799927D00D1BB17 /* UIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelpers.h; sourceTree = "<group>"; };
 		C081425E1799927D00D1BB17 /* UIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelpers.m; sourceTree = "<group>"; };
+		C081426117999A3A00D1BB17 /* backButton-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton-01.png"; sourceTree = "<group>"; };
+		C081426217999A3A00D1BB17 /* forwardButton-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forwardButton-01.png"; sourceTree = "<group>"; };
+		C081426317999A3A00D1BB17 /* tabsButton-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabsButton-01.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 		C081422F1799804400D1BB17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C081426017999A2800D1BB17 /* Images */,
 				C08142301799804400D1BB17 /* Satellite-Info.plist */,
 				C08142311799804400D1BB17 /* InfoPlist.strings */,
 				C08142341799804400D1BB17 /* main.m */,
@@ -164,6 +171,16 @@
 				C08142461799804400D1BB17 /* ViewController_iPad.xib */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C081426017999A2800D1BB17 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C081426117999A3A00D1BB17 /* backButton-01.png */,
+				C081426217999A3A00D1BB17 /* forwardButton-01.png */,
+				C081426317999A3A00D1BB17 /* tabsButton-01.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +240,9 @@
 				C081423F1799804400D1BB17 /* Default-568h@2x.png in Resources */,
 				C08142451799804400D1BB17 /* ViewController_iPhone.xib in Resources */,
 				C08142481799804400D1BB17 /* ViewController_iPad.xib in Resources */,
+				C081426417999A3A00D1BB17 /* backButton-01.png in Resources */,
+				C081426517999A3A00D1BB17 /* forwardButton-01.png in Resources */,
+				C081426617999A3A00D1BB17 /* tabsButton-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

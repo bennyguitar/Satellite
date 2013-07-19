@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
     [self buildUI];
+    
+    // Set Delegates
+    mainWebView.scrollView.delegate = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -31,6 +35,10 @@
     
     // Shadows
     //[UIHelpers makeShadowForView:urlBarView withRadius:0];
+    
+    // URL Bar
+    [self resetWebViewUI];
+    urlTextField.layer.cornerRadius = 3;
 }
 
 #pragma mark - Memory
@@ -42,7 +50,7 @@
 
 #pragma mark - URL Bar Animations/Actions
 -(void)dropInURLBar {
-    urlBarView.frame = CGRectMake(0, -1*urlBarView.frame.size.height, urlBarView.frame.size.width, urlBarView.frame.size.height);
+    urlBarView.frame = CGRectMake(0, -1*urlBarView.frame.size.height, self.view.frame.size.width, urlBarView.frame.size.height);
     [self.view addSubview:urlBarView];
     [UIView animateWithDuration:0.2 animations:^{
         urlBarView.frame = CGRectMake(0, 0, urlBarView.frame.size.width, urlBarView.frame.size.height);
@@ -78,15 +86,48 @@
     }];
 }
 
-#pragma mark - Web View Delegate
+-(void)resetWebViewUI {
+    BOOL canGoBack = [mainWebView canGoBack];
+    BOOL canGoForward = [mainWebView canGoForward];
+    [UIView animateWithDuration:0.2 animations:^{
+        if (canGoBack && canGoForward) {
+            backButton.frame = CGRectMake(4, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
+            forwardButton.frame = CGRectMake(backButton.frame.origin.x + backButton.frame.size.width + 10, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
+            urlTextField.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
+            
+            backButton.alpha = 0.35;
+            forwardButton.alpha = 0.35;
+        }
+        else if (canGoForward && !canGoBack) {
+            forwardButton.frame = CGRectMake(4, forwardButton.frame.origin.y, forwardButton.frame.size.width, forwardButton.frame.size.height);
+            urlTextField.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
+            
+            backButton.alpha = 0;
+            forwardButton.alpha = 0.35;
+        }
+        else if (canGoBack && !canGoForward) {
+            backButton.frame = CGRectMake(4, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
+            urlTextField.frame = CGRectMake(backButton.frame.origin.x + backButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (backButton.frame.origin.x + backButton.frame.size.width + 10), backButton.frame.size.height);
+            
+            backButton.alpha = 0.35;
+            forwardButton.alpha = 0;
+        }
+        else {
+            urlTextField.frame = CGRectMake(4, backButton.frame.origin.y, self.view.frame.size.width - 45, backButton.frame.size.height);
+            
+            backButton.alpha = 0;
+            forwardButton.alpha = 0;
+        }
+    }];
+}
 
+#pragma mark - Web View Delegate
+-(void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self resetWebViewUI];
+}
 
 #pragma mark - ScrollView Delegate
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [urlTextField resignFirstResponder];
-}
-
--(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [urlTextField resignFirstResponder];
 }
 
