@@ -22,6 +22,7 @@
 		C08142541799810F00D1BB17 /* StarField.m in Sources */ = {isa = PBXBuildFile; fileRef = C08142531799810F00D1BB17 /* StarField.m */; };
 		C0814256179981C700D1BB17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0814255179981C700D1BB17 /* QuartzCore.framework */; };
 		C08142591799828600D1BB17 /* RadialGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C08142581799828600D1BB17 /* RadialGradientView.m */; };
+		C081425C17998AF700D1BB17 /* URLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C081425B17998AF700D1BB17 /* URLHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		C0814255179981C700D1BB17 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C08142571799828600D1BB17 /* RadialGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialGradientView.h; sourceTree = "<group>"; };
 		C08142581799828600D1BB17 /* RadialGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialGradientView.m; sourceTree = "<group>"; };
+		C081425A17998AF700D1BB17 /* URLHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLHelpers.h; sourceTree = "<group>"; };
+		C081425B17998AF700D1BB17 /* URLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 		C081424E1799806900D1BB17 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C081425A17998AF700D1BB17 /* URLHelpers.h */,
+				C081425B17998AF700D1BB17 /* URLHelpers.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				C08142421799804400D1BB17 /* ViewController.m in Sources */,
 				C08142541799810F00D1BB17 /* StarField.m in Sources */,
 				C08142591799828600D1BB17 /* RadialGradientView.m in Sources */,
+				C081425C17998AF700D1BB17 /* URLHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

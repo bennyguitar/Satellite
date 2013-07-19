@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "StarField.h"
 #import "RadialGradientView.h"
+#import "URLHelpers.h"
 
 @interface ViewController : UIViewController <UITextFieldDelegate,UIWebViewDelegate> {
     __weak IBOutlet StarField *bgStarField;
@@ -16,6 +17,9 @@
     // URL Bar
     IBOutlet UIView *urlBarView;
     __weak IBOutlet UITextField *urlTextField;
+    
+    // Web View
+    IBOutlet UIWebView *mainWebView;
 }
 
 @end

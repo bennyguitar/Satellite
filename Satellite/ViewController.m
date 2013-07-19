@@ -49,6 +49,8 @@
 #pragma mark - UITextField Delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    NSURL *url = [URLHelpers urlFromURLBarText:textField.text];
+    NSLog(@"%@", url.absoluteString);
     return YES;
 }
 
