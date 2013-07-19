@@ -28,6 +28,9 @@
 -(void)buildUI {
     // StarField
     [bgStarField addStars:(self.view.frame.size.width*1.25)];
+    
+    // Shadows
+    //[UIHelpers makeShadowForView:urlBarView withRadius:0];
 }
 
 #pragma mark - Memory
@@ -50,8 +53,42 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     NSURL *url = [URLHelpers urlFromURLBarText:textField.text];
-    NSLog(@"%@", url.absoluteString);
+    [self showWebViewWithURL:url];
     return YES;
 }
+
+#pragma mark - Web View Actions/Animations
+-(void)showWebViewWithURL:(NSURL *)url {
+    if ([mainWebView superview] != self.view) {
+        mainWebView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - urlBarView.frame.size.height);
+        [self.view insertSubview:mainWebView belowSubview:urlBarView];
+        [UIView animateWithDuration:0.3 animations:^{
+            mainWebView.frame = CGRectMake(0, urlBarView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - urlBarView.frame.size.height);
+        }];
+    }
+    
+    [mainWebView loadRequest:[NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:15]];
+}
+
+-(void)hideWebView {
+    [UIView animateWithDuration:0.3 animations:^{
+        mainWebView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - urlBarView.frame.size.height);
+    } completion:^(BOOL fin){
+        [mainWebView removeFromSuperview];
+    }];
+}
+
+#pragma mark - Web View Delegate
+
+
+#pragma mark - ScrollView Delegate
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [urlTextField resignFirstResponder];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [urlTextField resignFirstResponder];
+}
+
 
 @end

@@ -23,6 +23,7 @@
 		C0814256179981C700D1BB17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0814255179981C700D1BB17 /* QuartzCore.framework */; };
 		C08142591799828600D1BB17 /* RadialGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C08142581799828600D1BB17 /* RadialGradientView.m */; };
 		C081425C17998AF700D1BB17 /* URLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C081425B17998AF700D1BB17 /* URLHelpers.m */; };
+		C081425F1799927D00D1BB17 /* UIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C081425E1799927D00D1BB17 /* UIHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		C08142581799828600D1BB17 /* RadialGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialGradientView.m; sourceTree = "<group>"; };
 		C081425A17998AF700D1BB17 /* URLHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLHelpers.h; sourceTree = "<group>"; };
 		C081425B17998AF700D1BB17 /* URLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLHelpers.m; sourceTree = "<group>"; };
+		C081425D1799927D00D1BB17 /* UIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelpers.h; sourceTree = "<group>"; };
+		C081425E1799927D00D1BB17 /* UIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 			children = (
 				C081425A17998AF700D1BB17 /* URLHelpers.h */,
 				C081425B17998AF700D1BB17 /* URLHelpers.m */,
+				C081425D1799927D00D1BB17 /* UIHelpers.h */,
+				C081425E1799927D00D1BB17 /* UIHelpers.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				C08142541799810F00D1BB17 /* StarField.m in Sources */,
 				C08142591799828600D1BB17 /* RadialGradientView.m in Sources */,
 				C081425C17998AF700D1BB17 /* URLHelpers.m in Sources */,
+				C081425F1799927D00D1BB17 /* UIHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

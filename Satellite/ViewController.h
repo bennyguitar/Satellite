@@ -10,8 +10,9 @@
 #import "StarField.h"
 #import "RadialGradientView.h"
 #import "URLHelpers.h"
+#import "UIHelpers.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate,UIWebViewDelegate> {
+@interface ViewController : UIViewController <UITextFieldDelegate,UIWebViewDelegate, UIScrollViewDelegate> {
     __weak IBOutlet StarField *bgStarField;
     
     // URL Bar
