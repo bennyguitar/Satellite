@@ -27,6 +27,7 @@
 		C081426417999A3A00D1BB17 /* backButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426117999A3A00D1BB17 /* backButton-01.png */; };
 		C081426517999A3A00D1BB17 /* forwardButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426217999A3A00D1BB17 /* forwardButton-01.png */; };
 		C081426617999A3A00D1BB17 /* tabsButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426317999A3A00D1BB17 /* tabsButton-01.png */; };
+		C0868954179C698600B5DDC1 /* Tab.m in Sources */ = {isa = PBXBuildFile; fileRef = C0868953179C698600B5DDC1 /* Tab.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		C081426117999A3A00D1BB17 /* backButton-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton-01.png"; sourceTree = "<group>"; };
 		C081426217999A3A00D1BB17 /* forwardButton-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forwardButton-01.png"; sourceTree = "<group>"; };
 		C081426317999A3A00D1BB17 /* tabsButton-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabsButton-01.png"; sourceTree = "<group>"; };
+		C0868952179C698600B5DDC1 /* Tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab.h; sourceTree = "<group>"; };
+		C0868953179C698600B5DDC1 /* Tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		C081422E1799804400D1BB17 /* Satellite */ = {
 			isa = PBXGroup;
 			children = (
+				C0868951179C696700B5DDC1 /* Data Objects */,
 				C0814251179980A800D1BB17 /* Controllers */,
 				C08142501799808300D1BB17 /* NavDeck */,
 				C081424F1799806F00D1BB17 /* Custom Views */,
@@ -181,6 +185,15 @@
 				C081426317999A3A00D1BB17 /* tabsButton-01.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		C0868951179C696700B5DDC1 /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C0868952179C698600B5DDC1 /* Tab.h */,
+				C0868953179C698600B5DDC1 /* Tab.m */,
+			);
+			name = "Data Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 				C08142591799828600D1BB17 /* RadialGradientView.m in Sources */,
 				C081425C17998AF700D1BB17 /* URLHelpers.m in Sources */,
 				C081425F1799927D00D1BB17 /* UIHelpers.m in Sources */,
+				C0868954179C698600B5DDC1 /* Tab.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +408,7 @@
 				C081424D1799804400D1BB17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

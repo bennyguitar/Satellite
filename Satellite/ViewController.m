@@ -36,7 +36,7 @@
     [self performSelector:@selector(dropInURLBar) withObject:nil afterDelay:0.25];
 }
 
-/*
+
 #pragma mark - Keybaord Notifications
 // Test with urlBar on bottom of screen
 -(void)keyboardWasShown:(NSNotification *)notification {
@@ -47,7 +47,7 @@
 -(void)keyboardDidHide:(NSNotification *)notification {
     [self animateURLBarWithKeyboardHeight:0];
 }
- */
+
 
 #pragma mark - UI
 -(void)buildUI {
@@ -62,12 +62,14 @@
     urlTextField.layer.cornerRadius = 3;
 }
 
+
 #pragma mark - Memory
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - URL Bar Animations/Actions
 -(void)dropInURLBar {
@@ -96,6 +98,7 @@
 - (IBAction)didPressTabs:(id)sender {
 }
 
+
 #pragma mark - UITextField Delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -107,6 +110,7 @@
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     return YES;
 }
+
 
 #pragma mark - Web View Actions/Animations
 -(void)showWebViewWithURL:(NSURL *)url {
@@ -164,10 +168,12 @@
     }];
 }
 
+
 #pragma mark - Web View Delegate
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [self resetWebViewUI];
 }
+
 
 #pragma mark - ScrollView Delegate
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
