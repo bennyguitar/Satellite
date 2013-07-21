@@ -22,11 +22,32 @@
     
     // Set Delegates
     mainWebView.scrollView.delegate = self;
+    
+    /*
+    // Register for Notifications
+    // Only used with urlBar on bottom of screen
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+     */
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [self performSelector:@selector(dropInURLBar) withObject:nil afterDelay:0.25];
 }
+
+/*
+#pragma mark - Keybaord Notifications
+// Test with urlBar on bottom of screen
+-(void)keyboardWasShown:(NSNotification *)notification {
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    [self animateURLBarWithKeyboardHeight:keyboardSize.height];
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification {
+    [self animateURLBarWithKeyboardHeight:0];
+}
+ */
 
 #pragma mark - UI
 -(void)buildUI {
@@ -57,6 +78,13 @@
     }];
 }
 
+// Test with urlBar on bottom of screen
+-(void)animateURLBarWithKeyboardHeight:(float)height {
+    [UIView animateWithDuration:0.25 animations:^{
+        urlBarView.frame = CGRectMake(0, self.view.frame.size.height - urlBarView.frame.size.height - height, urlBarView.frame.size.width, urlBarView.frame.size.height);
+    }];
+}
+
 - (IBAction)didPressBack:(id)sender {
     [mainWebView goBack];
 }
@@ -73,6 +101,10 @@
     [textField resignFirstResponder];
     NSURL *url = [URLHelpers urlFromURLBarText:textField.text];
     [self showWebViewWithURL:url];
+    return YES;
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     return YES;
 }
 
