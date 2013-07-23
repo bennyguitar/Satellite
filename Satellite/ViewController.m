@@ -29,7 +29,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
      */
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -59,7 +58,7 @@
     
     // URL Bar
     [self resetWebViewUI];
-    urlTextField.layer.cornerRadius = 3;
+    textFieldContainer.layer.cornerRadius = 3;
 }
 
 
@@ -122,7 +121,7 @@
         }];
     }
     
-    [mainWebView loadRequest:[NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:15]];
+    [mainWebView loadRequest:[NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:15]];
 }
 
 -(void)hideWebView {
@@ -140,27 +139,27 @@
         if (canGoBack && canGoForward) {
             backButton.frame = CGRectMake(4, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
             forwardButton.frame = CGRectMake(backButton.frame.origin.x + backButton.frame.size.width + 10, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
-            urlTextField.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
+            textFieldContainer.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
             
             backButton.alpha = 0.35;
             forwardButton.alpha = 0.35;
         }
         else if (canGoForward && !canGoBack) {
             forwardButton.frame = CGRectMake(4, forwardButton.frame.origin.y, forwardButton.frame.size.width, forwardButton.frame.size.height);
-            urlTextField.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
+            textFieldContainer.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
             
             backButton.alpha = 0;
             forwardButton.alpha = 0.35;
         }
         else if (canGoBack && !canGoForward) {
             backButton.frame = CGRectMake(4, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
-            urlTextField.frame = CGRectMake(backButton.frame.origin.x + backButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (backButton.frame.origin.x + backButton.frame.size.width + 10), backButton.frame.size.height);
+            textFieldContainer.frame = CGRectMake(backButton.frame.origin.x + backButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (backButton.frame.origin.x + backButton.frame.size.width + 10), backButton.frame.size.height);
             
             backButton.alpha = 0.35;
             forwardButton.alpha = 0;
         }
         else {
-            urlTextField.frame = CGRectMake(4, backButton.frame.origin.y, self.view.frame.size.width - 45, backButton.frame.size.height);
+            textFieldContainer.frame = CGRectMake(4, backButton.frame.origin.y, self.view.frame.size.width - 45, backButton.frame.size.height);
             
             backButton.alpha = 0;
             forwardButton.alpha = 0;

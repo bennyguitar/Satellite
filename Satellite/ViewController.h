@@ -18,6 +18,7 @@
     // URL Bar
     IBOutlet UIView *urlBarView;
     __weak IBOutlet UITextField *urlTextField;
+    __weak IBOutlet UIView *textFieldContainer;
     __weak IBOutlet UIButton *backButton;
     __weak IBOutlet UIButton *forwardButton;
     __weak IBOutlet UIButton *tabsButton;
