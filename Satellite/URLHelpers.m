@@ -29,7 +29,7 @@
     for (NSString *component in textComponents) {
         newSearchString = [newSearchString stringByAppendingString:[NSString stringWithFormat:@"%@+", component]];
     }
-    return [NSURL URLWithString:[NSString stringWithFormat:@"http://google.com/search?q=%@",[newSearchString substringToIndex:newSearchString.length - 1]]];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://duckduckgo.com/?q=%@",[newSearchString substringToIndex:newSearchString.length - 1]]];
 }
 
 @end
