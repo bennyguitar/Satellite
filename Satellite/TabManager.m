@@ -40,13 +40,13 @@ static TabManager * _Tabs = nil;
 }
 
 #pragma mark - Add Tab
--(void)addTab:(Tab *)aTab {
-    [self.allTabs addObject:aTab];
++(void)addTab:(Tab *)aTab {
+    [[TabManager Tabs].allTabs addObject:aTab];
 }
 
 #pragma mark - Kill Tab
--(void)killTab:(Tab *)kTab {
-    [self.allTabs removeObject:kTab];
++(void)killTab:(Tab *)kTab {
+    [[TabManager Tabs].allTabs removeObject:kTab];
 }
 
 #pragma mark - Current Tab

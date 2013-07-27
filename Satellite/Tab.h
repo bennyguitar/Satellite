@@ -10,7 +10,7 @@
 
 @interface Tab : NSObject
 
-@property (nonatomic, retain) NSURL *url;
+@property (nonatomic, retain) NSURL *Url;
 @property (nonatomic, retain) NSString *Title;
 
 @end

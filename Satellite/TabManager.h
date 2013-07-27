@@ -15,8 +15,8 @@
 @property (nonatomic, retain) Tab *currentTab;
 
 +(TabManager*)Tabs;
--(void)addTab:(Tab *)aTab;
--(void)killTab:(Tab *)kTab;
++(void)addTab:(Tab *)aTab;
++(void)killTab:(Tab *)kTab;
 +(Tab *)currentTab;
 
 @end

@@ -111,7 +111,7 @@
 #pragma mark - UITextField Delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    [TabManager currentTab].url = [URLHelpers urlFromURLBarText:textField.text];
+    [TabManager currentTab].Url = [URLHelpers urlFromURLBarText:textField.text];
     [self showWebViewWithTab:[TabManager currentTab]];
     return YES;
 }
@@ -132,7 +132,7 @@
         }];
     }
     
-    [mainWebView loadRequest:[NSURLRequest requestWithURL:tab.url cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:15]];
+    [mainWebView loadRequest:[NSURLRequest requestWithURL:tab.Url cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:15]];
 }
 
 -(void)hideWebView {
@@ -180,7 +180,12 @@
 
 
 #pragma mark - Web View Delegate
+-(void)webViewDidStartLoad:(UIWebView *)webView {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self resetWebViewUI];
     [TabManager currentTab].Title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
