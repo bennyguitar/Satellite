@@ -31,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C068275717A417C0008DFECC /* TabManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabManager.h; sourceTree = "<group>"; };
+		C068275817A417C0008DFECC /* TabManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabManager.m; sourceTree = "<group>"; };
 		C08142251799804400D1BB17 /* Satellite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Satellite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08142281799804400D1BB17 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C081422A1799804400D1BB17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -192,6 +194,8 @@
 			children = (
 				C0868952179C698600B5DDC1 /* Tab.h */,
 				C0868953179C698600B5DDC1 /* Tab.m */,
+				C068275717A417C0008DFECC /* TabManager.h */,
+				C068275817A417C0008DFECC /* TabManager.m */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
