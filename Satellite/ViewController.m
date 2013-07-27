@@ -20,6 +20,9 @@
     [super viewDidLoad];
     [self buildUI];
     
+    // Set StatusBar to Light Color (iOS7)
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     // Set Delegates
     mainWebView.scrollView.delegate = self;
     
@@ -33,6 +36,12 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [self performSelector:@selector(dropInURLBar) withObject:nil afterDelay:0.25];
+}
+
+
+#pragma mark - StatusBar
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 
@@ -52,6 +61,7 @@
 -(void)buildUI {
     // StarField
     [bgStarField addStars:(self.view.frame.size.width*1.25)];
+    //[bgStarField startStarField];
     
     // Shadows
     //[UIHelpers makeShadowForView:urlBarView withRadius:0];
@@ -107,6 +117,7 @@
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    textField.keyboardAppearance = UIKeyboardAppearanceDark;
     return YES;
 }
 
@@ -141,21 +152,21 @@
             forwardButton.frame = CGRectMake(backButton.frame.origin.x + backButton.frame.size.width + 10, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
             textFieldContainer.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
             
-            backButton.alpha = 0.35;
-            forwardButton.alpha = 0.35;
+            backButton.alpha = 0.5;
+            forwardButton.alpha = 0.5;
         }
         else if (canGoForward && !canGoBack) {
             forwardButton.frame = CGRectMake(4, forwardButton.frame.origin.y, forwardButton.frame.size.width, forwardButton.frame.size.height);
             textFieldContainer.frame = CGRectMake(forwardButton.frame.origin.x + forwardButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (forwardButton.frame.origin.x + forwardButton.frame.size.width + 10), backButton.frame.size.height);
             
             backButton.alpha = 0;
-            forwardButton.alpha = 0.35;
+            forwardButton.alpha = 0.5;
         }
         else if (canGoBack && !canGoForward) {
             backButton.frame = CGRectMake(4, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
             textFieldContainer.frame = CGRectMake(backButton.frame.origin.x + backButton.frame.size.width + 10, backButton.frame.origin.y, (self.view.frame.size.width - 40) - (backButton.frame.origin.x + backButton.frame.size.width + 10), backButton.frame.size.height);
             
-            backButton.alpha = 0.35;
+            backButton.alpha = 0.5;
             forwardButton.alpha = 0;
         }
         else {

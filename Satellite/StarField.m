@@ -75,21 +75,31 @@
 -(void)createRepeatingStars {
     if (self.isCreatingStars) {
         [self addSubview:[self createStar]];
-        [self performSelector:@selector(createRepeatingStars) withObject:nil afterDelay:0.15];
+        [self performSelector:@selector(createRepeatingStars) withObject:nil afterDelay:0.10];
     }
 }
 
 -(void)moveStars {
     if (self.isMovingStars) {
+        NSMutableArray *starsToAnimate = [NSMutableArray array];
+        // Remove Stars that don't need to be animated
         for (UIView *s in self.subviews) {
             if (s.center.x < 0) {
                 [s removeFromSuperview];
             }
             else {
-                s.center = CGPointMake(s.center.x - 1, s.center.y);
+                [starsToAnimate addObject:s];
             }
         }
         
+        // Animate Stars
+        [UIView animateWithDuration:0.01 animations:^{
+            for (UIView *s in starsToAnimate) {
+                s.center = CGPointMake(s.center.x - 1, s.center.y);
+            }
+        }];
+        
+        // Do it all over again
         [self performSelector:@selector(moveStars) withObject:nil afterDelay:0.06];
     }
 }
