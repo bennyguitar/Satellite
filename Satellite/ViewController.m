@@ -111,8 +111,8 @@
 #pragma mark - UITextField Delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    NSURL *url = [URLHelpers urlFromURLBarText:textField.text];
-    [self showWebViewWithURL:url];
+    [TabManager Tabs].currentTab.url = [URLHelpers urlFromURLBarText:textField.text];
+    [self showWebViewWithTab:[TabManager Tabs].currentTab];
     return YES;
 }
 
@@ -123,7 +123,7 @@
 
 
 #pragma mark - Web View Actions/Animations
--(void)showWebViewWithURL:(NSURL *)url {
+-(void)showWebViewWithTab:(Tab *)tab {
     if ([mainWebView superview] != self.view) {
         mainWebView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - urlBarView.frame.size.height);
         [self.view insertSubview:mainWebView belowSubview:urlBarView];
@@ -132,7 +132,7 @@
         }];
     }
     
-    [mainWebView loadRequest:[NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:15]];
+    [mainWebView loadRequest:[NSURLRequest requestWithURL:tab.url cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:15]];
 }
 
 -(void)hideWebView {
@@ -182,6 +182,7 @@
 #pragma mark - Web View Delegate
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [self resetWebViewUI];
+    [TabManager Tabs].currentTab.Title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 

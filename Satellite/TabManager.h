@@ -11,8 +11,11 @@
 
 @interface TabManager : NSObject
 
+@property (nonatomic, retain) NSMutableArray *allTabs;
+@property (nonatomic, retain) Tab *currentTab;
+
 +(TabManager*)Tabs;
--(Tab)currentTab;
--(NSMutableArray *)allTabs;
+-(void)addTab:(Tab *)aTab;
+-(void)killTab:(Tab *)kTab;
 
 @end

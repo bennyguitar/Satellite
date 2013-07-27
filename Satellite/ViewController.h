@@ -11,6 +11,7 @@
 #import "RadialGradientView.h"
 #import "URLHelpers.h"
 #import "UIHelpers.h"
+#import "TabManager.h"
 
 @interface ViewController : UIViewController <UITextFieldDelegate,UIWebViewDelegate, UIScrollViewDelegate> {
     __weak IBOutlet StarField *bgStarField;

@@ -28,6 +28,7 @@
 		C081426517999A3A00D1BB17 /* forwardButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426217999A3A00D1BB17 /* forwardButton-01.png */; };
 		C081426617999A3A00D1BB17 /* tabsButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426317999A3A00D1BB17 /* tabsButton-01.png */; };
 		C0868954179C698600B5DDC1 /* Tab.m in Sources */ = {isa = PBXBuildFile; fileRef = C0868953179C698600B5DDC1 /* Tab.m */; };
+		C0F3808517A41A3800250743 /* TabManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C068275817A417C0008DFECC /* TabManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -270,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F3808517A41A3800250743 /* TabManager.m in Sources */,
 				C08142351799804400D1BB17 /* main.m in Sources */,
 				C08142391799804400D1BB17 /* AppDelegate.m in Sources */,
 				C08142421799804400D1BB17 /* ViewController.m in Sources */,
