@@ -11,6 +11,7 @@
                 <outlet property="bgStarField" destination="8" id="13"/>
                 <outlet property="forwardButton" destination="25" id="28"/>
                 <outlet property="mainWebView" destination="20" id="21"/>
+                <outlet property="tabScrollView" destination="pEo-KD-x2z" id="CJW-Rl-Oqd"/>
                 <outlet property="tabsButton" destination="26" id="29"/>
                 <outlet property="textFieldContainer" destination="34" id="35"/>
                 <outlet property="urlBarView" destination="14" id="16"/>
@@ -106,7 +107,7 @@
                     <color key="backgroundColor" white="0.4473765980113637" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.18599076704545456" alpha="0.95000000000000007" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.17000000000000001" alpha="0.69000000000000006" colorSpace="calibratedWhite"/>
         </view>
         <webView contentMode="scaleToFill" id="20">
             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -116,6 +117,10 @@
                 <outlet property="delegate" destination="-1" id="22"/>
             </connections>
         </webView>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pEo-KD-x2z" customClass="TabScrollView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+        </scrollView>
     </objects>
     <resources>
         <image name="backButton-01.png" width="80" height="80"/>

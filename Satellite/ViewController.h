@@ -12,6 +12,8 @@
 #import "URLHelpers.h"
 #import "UIHelpers.h"
 #import "TabManager.h"
+#import "TabView.h"
+#import "TabScrollView.h"
 
 @interface ViewController : UIViewController <UITextFieldDelegate,UIWebViewDelegate, UIScrollViewDelegate> {
     __weak IBOutlet StarField *bgStarField;
@@ -23,6 +25,9 @@
     __weak IBOutlet UIButton *backButton;
     __weak IBOutlet UIButton *forwardButton;
     __weak IBOutlet UIButton *tabsButton;
+    
+    // Tab Scroll View
+    IBOutlet TabScrollView *tabScrollView;
     
     // Web View
     IBOutlet UIWebView *mainWebView;

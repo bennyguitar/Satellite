@@ -29,6 +29,9 @@
 		C081426617999A3A00D1BB17 /* tabsButton-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C081426317999A3A00D1BB17 /* tabsButton-01.png */; };
 		C0868954179C698600B5DDC1 /* Tab.m in Sources */ = {isa = PBXBuildFile; fileRef = C0868953179C698600B5DDC1 /* Tab.m */; };
 		C0F3808517A41A3800250743 /* TabManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C068275817A417C0008DFECC /* TabManager.m */; };
+		C0F3809017A46A2400250743 /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F3808F17A46A2400250743 /* TabView.m */; };
+		C0F3809217A46AB500250743 /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F3809117A46AB500250743 /* TabView.xib */; };
+		C0F3809517A4740E00250743 /* TabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F3809417A4740E00250743 /* TabScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,11 @@
 		C081426317999A3A00D1BB17 /* tabsButton-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabsButton-01.png"; sourceTree = "<group>"; };
 		C0868952179C698600B5DDC1 /* Tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab.h; sourceTree = "<group>"; };
 		C0868953179C698600B5DDC1 /* Tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab.m; sourceTree = "<group>"; };
+		C0F3808E17A46A2400250743 /* TabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
+		C0F3808F17A46A2400250743 /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
+		C0F3809117A46AB500250743 /* TabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
+		C0F3809317A4740E00250743 /* TabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabScrollView.h; sourceTree = "<group>"; };
+		C0F3809417A4740E00250743 /* TabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,11 @@
 				C08142581799828600D1BB17 /* RadialGradientView.m */,
 				C08142521799810F00D1BB17 /* StarField.h */,
 				C08142531799810F00D1BB17 /* StarField.m */,
+				C0F3808E17A46A2400250743 /* TabView.h */,
+				C0F3808F17A46A2400250743 /* TabView.m */,
+				C0F3809117A46AB500250743 /* TabView.xib */,
+				C0F3809317A4740E00250743 /* TabScrollView.h */,
+				C0F3809417A4740E00250743 /* TabScrollView.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -256,6 +269,7 @@
 				C081423B1799804400D1BB17 /* Default.png in Resources */,
 				C081423D1799804400D1BB17 /* Default@2x.png in Resources */,
 				C081423F1799804400D1BB17 /* Default-568h@2x.png in Resources */,
+				C0F3809217A46AB500250743 /* TabView.xib in Resources */,
 				C08142451799804400D1BB17 /* ViewController_iPhone.xib in Resources */,
 				C08142481799804400D1BB17 /* ViewController_iPad.xib in Resources */,
 				C081426417999A3A00D1BB17 /* backButton-01.png in Resources */,
@@ -276,7 +290,9 @@
 				C08142391799804400D1BB17 /* AppDelegate.m in Sources */,
 				C08142421799804400D1BB17 /* ViewController.m in Sources */,
 				C08142541799810F00D1BB17 /* StarField.m in Sources */,
+				C0F3809517A4740E00250743 /* TabScrollView.m in Sources */,
 				C08142591799828600D1BB17 /* RadialGradientView.m in Sources */,
+				C0F3809017A46A2400250743 /* TabView.m in Sources */,
 				C081425C17998AF700D1BB17 /* URLHelpers.m in Sources */,
 				C081425F1799927D00D1BB17 /* UIHelpers.m in Sources */,
 				C0868954179C698600B5DDC1 /* Tab.m in Sources */,

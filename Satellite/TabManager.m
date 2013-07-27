@@ -54,6 +54,9 @@ static TabManager * _Tabs = nil;
     return [TabManager Tabs].currentTab;
 }
 
++(NSArray *)allTabs {
+    return [TabManager Tabs].allTabs;
+}
 
 
 @end
