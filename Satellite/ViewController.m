@@ -133,8 +133,8 @@
 #pragma mark - Tab Scroll View
 -(void)launchTabView {
     tabScrollView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - urlBarView.frame.size.height);
-    //[tabScrollView setWithTabs:[TabManager allTabs]];
-    [tabScrollView setWithTabs:@[[TabManager currentTab],[TabManager currentTab],[TabManager currentTab],[TabManager currentTab],[TabManager currentTab]]];
+    [tabScrollView setWithTabs:[TabManager allTabs]];
+    //[tabScrollView setWithTabs:@[[TabManager currentTab],[TabManager currentTab],[TabManager currentTab],[TabManager currentTab],[TabManager currentTab]]];
     [self.view addSubview:tabScrollView];
     [UIView animateWithDuration:0.3 animations:^{
         tabScrollView.frame = CGRectMake(0, urlBarView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - urlBarView.frame.size.height);
