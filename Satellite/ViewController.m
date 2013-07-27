@@ -111,8 +111,8 @@
 #pragma mark - UITextField Delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    [TabManager Tabs].currentTab.url = [URLHelpers urlFromURLBarText:textField.text];
-    [self showWebViewWithTab:[TabManager Tabs].currentTab];
+    [TabManager currentTab].url = [URLHelpers urlFromURLBarText:textField.text];
+    [self showWebViewWithTab:[TabManager currentTab]];
     return YES;
 }
 
@@ -182,7 +182,7 @@
 #pragma mark - Web View Delegate
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [self resetWebViewUI];
-    [TabManager Tabs].currentTab.Title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    [TabManager currentTab].Title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 

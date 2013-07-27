@@ -17,5 +17,6 @@
 +(TabManager*)Tabs;
 -(void)addTab:(Tab *)aTab;
 -(void)killTab:(Tab *)kTab;
++(Tab *)currentTab;
 
 @end

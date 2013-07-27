@@ -49,6 +49,10 @@ static TabManager * _Tabs = nil;
     [self.allTabs removeObject:kTab];
 }
 
+#pragma mark - Current Tab
++(Tab *)currentTab {
+    return [TabManager Tabs].currentTab;
+}
 
 
 
