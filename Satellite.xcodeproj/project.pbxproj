@@ -32,6 +32,7 @@
 		C0F3809017A46A2400250743 /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F3808F17A46A2400250743 /* TabView.m */; };
 		C0F3809217A46AB500250743 /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F3809117A46AB500250743 /* TabView.xib */; };
 		C0F3809517A4740E00250743 /* TabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F3809417A4740E00250743 /* TabScrollView.m */; };
+		C0F3809817A59CE900250743 /* TabPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F3809717A59CDD00250743 /* TabPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,8 @@
 		C0F3809117A46AB500250743 /* TabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
 		C0F3809317A4740E00250743 /* TabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabScrollView.h; sourceTree = "<group>"; };
 		C0F3809417A4740E00250743 /* TabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabScrollView.m; sourceTree = "<group>"; };
+		C0F3809617A59CDD00250743 /* TabPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabPresenter.h; sourceTree = "<group>"; };
+		C0F3809717A59CDD00250743 /* TabPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				C0F3809117A46AB500250743 /* TabView.xib */,
 				C0F3809317A4740E00250743 /* TabScrollView.h */,
 				C0F3809417A4740E00250743 /* TabScrollView.m */,
+				C0F3809617A59CDD00250743 /* TabPresenter.h */,
+				C0F3809717A59CDD00250743 /* TabPresenter.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F3809817A59CE900250743 /* TabPresenter.m in Sources */,
 				C0F3808517A41A3800250743 /* TabManager.m in Sources */,
 				C08142351799804400D1BB17 /* main.m in Sources */,
 				C08142391799804400D1BB17 /* AppDelegate.m in Sources */,
